@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ascend Academy | JEE, NEET & Board Coaching in Anna Nagar, Chennai</title>
+<meta name="description" content="Ascend Academy offers JEE, NEET, Foundation and Class 11–12 board coaching in Anna Nagar, Chennai. Small batches, weekly tests. Book a free demo class.">
+<meta name="theme-color" content="#134E4A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --color-primary:#0D9488; --color-on-primary:#000000;
+    --color-secondary:#2DD4BF;
+    --color-accent:#D97706; --color-on-accent:#000000;
+    --color-background:#F0FDFA; --color-foreground:#134E4A;
+    --color-card:#FFFFFF; --color-muted:#E8F1F4; --color-muted-foreground:#475569;
+    --color-border:#99F6E4; --color-ring:#0D9488; --color-destructive:#B91C1C;
+    --color-dark:#134E4A; --color-on-dark:#FFFFFF;
+    --font-heading:Outfit,system-ui,sans-serif; --font-body:"Work Sans",system-ui,sans-serif;
+    --space-2:8px;--space-3:16px;--space-4:24px;--space-5:32px;--space-6:48px;--space-7:64px;--space-8:96px;
+    --radius:14px; --ease:cubic-bezier(.2,.7,.2,1);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{font-family:var(--font-body);font-size:1rem;line-height:1.6;background:var(--color-background);color:var(--color-foreground);-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:var(--font-heading);line-height:1.15;color:var(--color-dark);text-wrap:balance}
+  p{text-wrap:pretty}
+  a{color:inherit}
+  .icon{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 var(--space-4)}
+  section{padding:var(--space-8) 0}
+  .eyebrow{font-size:.85rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#0F766E;margin-bottom:var(--space-2)}
+  .h2{font-size:clamp(1.9rem,4vw,2.75rem);margin-bottom:var(--space-3)}
+  .lead{color:var(--color-muted-foreground);max-width:60ch;font-size:1.1rem}
+  .center{text-align:center}.center .lead{margin:0 auto}
+  :focus-visible{outline:3px solid var(--color-ring);outline-offset:3px;border-radius:6px}
+  .skip{position:absolute;left:-999px;top:8px;background:var(--color-dark);color:#fff;padding:12px 16px;border-radius:8px;z-index:100}
+  .skip:focus{left:8px}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:10px;font:600 1rem var(--font-body);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background-color .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease),box-shadow .2s var(--ease)}
+  .btn-accent{background:var(--color-accent);color:var(--color-on-accent)}
+  .btn-accent:hover{background:#B45309;color:#fff}
+  .btn-dark{background:var(--color-dark);color:#fff}
+  .btn-dark:hover{background:#0B3532}
+  .btn-ghost{border-color:currentColor}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .btn-line{border-color:var(--color-dark);color:var(--color-dark)}
+  .btn-line:hover{background:var(--color-dark);color:#fff}
+
+  /* Nav */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--color-muted)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:var(--space-3)}
+  .logo{display:flex;align-items:center;gap:10px;font-family:var(--font-heading);font-weight:700;font-size:1.35rem;color:var(--color-dark);text-decoration:none}
+  .logo-mark{width:38px;height:38px;border-radius:10px;background:var(--color-primary);display:grid;place-items:center;color:#000}
+  .logo-mark .icon{width:22px;height:22px}
+  .nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+  .nav-links a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:8px;text-decoration:none;font-weight:500;transition:background-color .2s}
+  .nav-links a:hover{background:var(--color-muted)}
+  .nav-links .btn{margin-left:8px;min-height:44px}
+  .nav-toggle{display:none;width:48px;height:48px;border-radius:10px;border:1px solid var(--color-muted-foreground);background:#fff;color:var(--color-dark);cursor:pointer;align-items:center;justify-content:center}
+
+  /* Hero */
+  .hero{background:var(--color-dark);color:#fff;padding:var(--space-8) 0 var(--space-7);position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:460px;height:460px;border-radius:50%;border:80px solid rgba(45,212,191,.12)}
+  .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:var(--space-6);align-items:center;position:relative;z-index:1}
+  .hero h1{color:#fff;font-size:clamp(2.4rem,5.5vw,3.9rem);margin-bottom:var(--space-3)}
+  .hero h1 span{color:var(--color-secondary)}
+  .hero .lead{color:#CCFBF1;margin-bottom:var(--space-5)}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(45,212,191,.15);color:#CCFBF1;padding:8px 14px;border-radius:999px;font-size:.9rem;font-weight:500;margin-bottom:var(--space-4)}
+  .pill .icon{width:18px;height:18px;color:var(--color-secondary)}
+  .hero-card{background:#fff;color:var(--color-foreground);border-radius:var(--radius);padding:var(--space-5);box-shadow:0 24px 60px rgba(0,0,0,.25)}
+  .hero-card h2{font-size:1.25rem;margin-bottom:var(--space-3)}
+  .batch{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-top:1px solid var(--color-muted)}
+  .batch b{display:block;font-family:var(--font-heading);color:var(--color-dark)}
+  .batch small{color:var(--color-muted-foreground);font-size:.9rem}
+  .seats{font-size:.85rem;font-weight:600;color:#9A3412;background:#FFEDD5;padding:4px 10px;border-radius:999px;white-space:nowrap}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4);margin-top:var(--space-7);border-top:1px solid rgba(255,255,255,.18);padding-top:var(--space-5);position:relative;z-index:1}
+  .stats b{display:block;font-family:var(--font-heading);font-size:2.2rem;color:#fff;line-height:1.1}
+  .stats span{color:#CCFBF1;font-size:.95rem}
+
+  /* Courses */
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4);margin-top:var(--space-6)}
+  .course{background:var(--color-card);border:1px solid var(--color-muted);border-radius:var(--radius);padding:var(--space-4);display:flex;flex-direction:column;gap:12px;transition:border-color .2s,box-shadow .2s}
+  .course:hover{border-color:var(--color-primary);box-shadow:0 12px 30px rgba(19,78,74,.1)}
+  .course .ic{width:48px;height:48px;border-radius:12px;background:#CCFBF1;color:#0F766E;display:grid;place-items:center}
+  .course h3{font-size:1.25rem}
+  .course p{color:var(--color-muted-foreground);font-size:.95rem}
+  .course ul{list-style:none;display:grid;gap:6px;font-size:.95rem}
+  .course li{display:flex;gap:8px}
+  .course li .icon{width:18px;height:18px;color:#0F766E;margin-top:3px}
+  .course .fee{margin-top:auto;padding-top:12px;border-top:1px solid var(--color-muted);font-weight:600;color:var(--color-dark)}
+  .course .fee small{font-weight:400;color:var(--color-muted-foreground)}
+
+  /* Why */
+  .why{background:#fff}
+  .why .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:var(--space-6);align-items:start}
+  .feats{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5) var(--space-4)}
+  .feat .icon{color:#0F766E;width:28px;height:28px;margin-bottom:10px}
+  .feat h3{font-size:1.15rem;margin-bottom:4px}
+  .feat p{color:var(--color-muted-foreground);font-size:.95rem}
+
+  /* Results */
+  .results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4);margin-top:var(--space-6)}
+  .res{background:var(--color-card);border-radius:var(--radius);padding:var(--space-4);border:1px solid var(--color-muted);text-align:center}
+  .avatar{width:64px;height:64px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;font-family:var(--font-heading);font-weight:700;font-size:1.3rem;background:var(--color-dark);color:#fff}
+  .res b{display:block;font-family:var(--font-heading);font-size:1.6rem;color:#0F766E}
+  .res h3{font-size:1.05rem}
+  .res p{color:var(--color-muted-foreground);font-size:.9rem}
+
+  /* Enquiry */
+  .enquiry .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:var(--space-6);align-items:start}
+  .contact-list{list-style:none;display:grid;gap:var(--space-3);margin-top:var(--space-4)}
+  .contact-list li{display:flex;gap:12px}
+  .contact-list .icon{color:#0F766E;margin-top:2px}
+  .contact-list a{text-decoration:none;font-weight:500}
+  .contact-list a:hover{text-decoration:underline}
+  form{background:#fff;border:1px solid var(--color-muted);border-radius:var(--radius);padding:var(--space-5);display:grid;gap:var(--space-4)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4)}
+  .field{display:grid;gap:6px}
+  label{font-weight:600;font-size:.95rem;color:var(--color-dark)}
+  label .opt{font-weight:400;color:var(--color-muted-foreground)}
+  input,select,textarea{font:inherit;font-size:1rem;min-height:48px;padding:10px 14px;border:1.5px solid #94A3B8;border-radius:10px;background:#fff;color:var(--color-dark);transition:border-color .2s}
+  textarea{min-height:96px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:3px solid rgba(13,148,136,.35);outline-offset:0;border-color:var(--color-primary)}
+  .help{font-size:.85rem;color:var(--color-muted-foreground)}
+  .err{font-size:.875rem;color:var(--color-destructive);display:none}
+  .field.invalid input,.field.invalid select{border-color:var(--color-destructive)}
+  .field.invalid .err{display:block}
+  form .btn{width:100%}
+
+  /* FAQ */
+  .faq{background:#fff}
+  .faq-list{max-width:780px;margin:var(--space-5) auto 0;display:grid;gap:12px}
+  details{border:1px solid var(--color-muted);border-radius:var(--radius);background:var(--color-background)}
+  summary{list-style:none;cursor:pointer;padding:18px 20px;font-weight:600;color:var(--color-dark);display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:56px}
+  summary::-webkit-details-marker{display:none}
+  summary .icon{transition:transform .2s var(--ease)}
+  details[open] summary .icon{transform:rotate(45deg)}
+  details p{padding:0 20px 18px;color:var(--color-muted-foreground)}
+
+  .map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--color-muted);height:320px;margin-top:var(--space-4)}
+  .map iframe{width:100%;height:100%;border:0}
+
+  footer{background:var(--color-dark);color:#CCFBF1;padding:var(--space-5) 0;font-size:.95rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:var(--space-3);flex-wrap:wrap}
+  footer b{color:#fff}
+
+  .mobile-bar{display:none}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:980px){
+    .grid4,.results-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:860px){
+    section{padding:var(--space-7) 0}
+    .nav-toggle{display:inline-flex}
+    .nav-links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:#fff;border-bottom:1px solid var(--color-muted);padding:8px var(--space-4) var(--space-3)}
+    .nav-links.open{display:flex}
+    .nav-links a{min-height:52px}
+    .nav-links .btn{margin:8px 0 0}
+    .hero{padding-top:var(--space-6)}
+    .hero .wrap,.why .wrap,.enquiry .wrap{grid-template-columns:1fr}
+    .stats{grid-template-columns:1fr 1fr}
+    .feats{grid-template-columns:1fr}
+    body{padding-bottom:76px}
+    .mobile-bar{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;padding:10px 12px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--color-muted);box-shadow:0 -8px 24px rgba(0,0,0,.08)}
+    .mobile-bar .btn{min-height:52px;padding:0 12px}
+  }
+  @media (max-width:520px){
+    .grid4,.results-grid,.two{grid-template-columns:1fr}
+    .ctas .btn{width:100%}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5M22 10v6"/></symbol>
+  <symbol id="i-atom" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z"/><path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.2 12h5.3l1.5-3 2 6 1.5-3h7.3"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M16 13H8M16 17H8"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></symbol>
+  <symbol id="i-msg" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a href="#top" class="logo"><span class="logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg></span>Ascend Academy</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#why">Why us</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a class="btn btn-accent" href="#enquire">Free demo class</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="pill"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Anna Nagar, Chennai · Since 2014</p>
+      <h1>Crack JEE &amp; NEET with <span>small batches</span> and real attention.</h1>
+      <p class="lead">Expert faculty, weekly tests and doubt-clearing every day. Maximum 25 students per batch, so no one gets left behind.</p>
+      <div class="ctas">
+        <a class="btn btn-accent" href="#enquire">Book a free demo class</a>
+        <a class="btn btn-ghost" href="tel:+919579643916"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call us</a>
+      </div>
+    </div>
+    <aside class="hero-card" aria-labelledby="batchesTitle">
+      <h2 id="batchesTitle">New batches starting</h2>
+      <div class="batch"><div><b>JEE 2028 (Class 11)</b><small>Starts 1 Dec · Mon–Sat, 5–8 PM</small></div><span class="seats">8 seats left</span></div>
+      <div class="batch"><div><b>NEET 2028 (Class 11)</b><small>Starts 1 Dec · Mon–Sat, 5–8 PM</small></div><span class="seats">5 seats left</span></div>
+      <div class="batch"><div><b>Foundation (Class 9–10)</b><small>Starts 8 Dec · Weekends</small></div><span class="seats">12 seats left</span></div>
+    </aside>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div><b>12+</b><span>years of teaching</span></div>
+      <div><b>2,400+</b><span>students taught</span></div>
+      <div><b>25</b><span>max per batch</span></div>
+      <div><b>Weekly</b><span>tests &amp; reports</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="courses">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Courses</p>
+      <h2 class="h2">Find the right course for your child</h2>
+      <p class="lead">Every course includes study material, test series and monthly parent meetings.</p>
+    </div>
+    <div class="grid4">
+      <article class="course reveal">
+        <div class="ic"><svg class="icon" aria-hidden="true"><use href="#i-atom"/></svg></div>
+        <h3>JEE Main &amp; Advanced</h3><p>Two-year programme for Class 11–12 students.</p>
+        <ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Physics, Chemistry, Maths</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Full mock tests every month</li></ul>
+        <p class="fee">₹85,000 <small>/ year</small></p>
+      </article>
+      <article class="course reveal">
+        <div class="ic"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></div>
+        <h3>NEET</h3><p>Two-year medical entrance programme.</p>
+        <ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Physics, Chemistry, Biology</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>NCERT-focused notes</li></ul>
+        <p class="fee">₹80,000 <small>/ year</small></p>
+      </article>
+      <article class="course reveal">
+        <div class="ic"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></div>
+        <h3>Foundation</h3><p>For Class 8–10, building strong basics early.</p>
+        <ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Maths &amp; Science</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Olympiad preparation</li></ul>
+        <p class="fee">₹40,000 <small>/ year</small></p>
+      </article>
+      <article class="course reveal">
+        <div class="ic"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></div>
+        <h3>Board exams</h3><p>Class 11–12, CBSE and State Board.</p>
+        <ul><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Chapter-wise revision</li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Previous years' papers</li></ul>
+        <p class="fee">₹35,000 <small>/ year</small></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Why Ascend</p>
+      <h2 class="h2">Built around how students actually learn</h2>
+      <p class="lead">We keep batches small so teachers know every student by name, and parents always know how their child is doing.</p>
+      <div class="ctas" style="margin-top:24px"><a class="btn btn-dark" href="#enquire">Book a free demo class</a></div>
+    </div>
+    <div class="feats reveal">
+      <div class="feat"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><h3>Small batches</h3><p>Maximum 25 students, so every doubt gets answered.</p></div>
+      <div class="feat"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg><h3>Weekly tests</h3><p>Progress reports shared with parents on WhatsApp.</p></div>
+      <div class="feat"><svg class="icon" aria-hidden="true"><use href="#i-help"/></svg><h3>Daily doubt hour</h3><p>One-on-one help from 4 to 5 PM, every weekday.</p></div>
+      <div class="feat"><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg><h3>Recorded lectures</h3><p>Missed a class? Watch it again on our app.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow">Results</p>
+      <h2 class="h2">Our 2026 toppers</h2>
+    </div>
+    <div class="results-grid">
+      <div class="res reveal"><div class="avatar" aria-hidden="true">AK</div><b>99.4%ile</b><h3>Arjun K.</h3><p>JEE Main 2026</p></div>
+      <div class="res reveal"><div class="avatar" aria-hidden="true">SP</div><b>672 / 720</b><h3>Sneha P.</h3><p>NEET 2026</p></div>
+      <div class="res reveal"><div class="avatar" aria-hidden="true">RM</div><b>98.7%ile</b><h3>Rahul M.</h3><p>JEE Main 2026</p></div>
+      <div class="res reveal"><div class="avatar" aria-hidden="true">DV</div><b>97.2%</b><h3>Divya V.</h3><p>Class 12 Boards</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="enquiry" id="enquire">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Free demo class</p>
+      <h2 class="h2">Try a class before you join</h2>
+      <p class="lead">Fill in the form and we'll reply on WhatsApp within a few hours to fix a time.</p>
+      <ul class="contact-list">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>2nd Floor, 45 Shanthi Colony Main Road, Anna Nagar, Chennai 600040</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span>Mon–Sat: 9 AM – 8 PM · Sun: 9 AM – 1 PM</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+919579643916">+91 95796 43916</a></li>
+      </ul>
+      <div class="map"><iframe src="https://maps.google.com/maps?q=Anna%20Nagar%20Chennai&z=15&output=embed" loading="lazy" title="Map showing Ascend Academy in Anna Nagar"></iframe></div>
+    </div>
+    <form id="enqForm" novalidate class="reveal" aria-labelledby="formTitle">
+      <h3 id="formTitle" style="font-size:1.35rem">Book your free demo class</h3>
+      <div class="two">
+        <div class="field" id="f-name">
+          <label for="name">Student's name</label>
+          <input id="name" name="name" autocomplete="name" required aria-describedby="name-err">
+          <p class="err" id="name-err">Please enter the student's name.</p>
+        </div>
+        <div class="field" id="f-phone">
+          <label for="phone">Parent's phone number</label>
+          <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="10" required aria-describedby="phone-help phone-err">
+          <p class="help" id="phone-help">10-digit mobile number</p>
+          <p class="err" id="phone-err">Please enter a valid 10-digit number.</p>
+        </div>
+      </div>
+      <div class="two">
+        <div class="field" id="f-class">
+          <label for="cls">Current class</label>
+          <select id="cls" name="cls" required aria-describedby="cls-err">
+            <option value="">Select class</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option><option>Dropper</option>
+          </select>
+          <p class="err" id="cls-err">Please select a class.</p>
+        </div>
+        <div class="field" id="f-course">
+          <label for="course">Course</label>
+          <select id="course" name="course" required aria-describedby="course-err">
+            <option value="">Select course</option><option>JEE</option><option>NEET</option><option>Foundation</option><option>Board exams</option>
+          </select>
+          <p class="err" id="course-err">Please select a course.</p>
+        </div>
+      </div>
+      <div class="field">
+        <label for="msg">Anything we should know? <span class="opt">(optional)</span></label>
+        <textarea id="msg" name="msg"></textarea>
+      </div>
+      <button class="btn btn-accent" type="submit"><svg class="icon" aria-hidden="true"><use href="#i-msg"/></svg>Send on WhatsApp</button>
+      <p class="help" style="text-align:center">Opens WhatsApp with your details filled in.</p>
+    </form>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="center reveal"><p class="eyebrow">FAQ</p><h2 class="h2">Questions parents ask</h2></div>
+    <div class="faq-list">
+      <details><summary>Is the demo class really free?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Yes. Your child can attend one full class in their subject at no cost and with no obligation to join.</p></details>
+      <details><summary>Can fees be paid in instalments?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Yes, you can pay in 3 instalments across the year. UPI, card and bank transfer are accepted.</p></details>
+      <details><summary>What if my child misses a class?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Every lecture is recorded and available on our app, and the daily doubt hour helps them catch up.</p></details>
+      <details><summary>Do you offer online classes?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Yes, all batches have a live online option for students who can't come in every day.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Ascend Academy</b> · © <span class="yr"></span><br><span style="opacity:.8">Demo website with sample content.</span></div>
+    <div>Website by <b>Your Studio Name</b></div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a class="btn btn-line" href="tel:+919579643916"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+  <a class="btn btn-accent" href="#enquire">Free demo class</a>
+</div>
+
+<script>
+  const WHATSAPP = "919579643916"; // edit for each client
+
+  // Form validation + WhatsApp hand-off
+  const form = document.getElementById('enqForm');
+  const rules = {
+    name: v => v.trim().length >= 2,
+    phone: v => /^[6-9]\d{9}$/.test(v.replace(/\D/g,'')),
+    cls: v => !!v,
+    course: v => !!v
+  };
+  const fieldOf = id => document.getElementById(id).closest('.field');
+  function check(id){
+    const el = document.getElementById(id), ok = rules[id](el.value);
+    fieldOf(id).classList.toggle('invalid', !ok);
+    el.setAttribute('aria-invalid', !ok);
+    return ok;
+  }
+  Object.keys(rules).forEach(id => {
+    const el = document.getElementById(id);
+    el.addEventListener('blur', () => { if (el.value) check(id); });
+    el.addEventListener('input', () => { if (fieldOf(id).classList.contains('invalid')) check(id); });
+  });
+  document.getElementById('phone').addEventListener('input', e => { e.target.value = e.target.value.replace(/\D/g,'').slice(0,10); });
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const bad = Object.keys(rules).filter(id => !check(id));
+    if (bad.length) { document.getElementById(bad[0]).focus(); return; }
+    const v = id => document.getElementById(id).value.trim();
+    const text = `Hi Ascend Academy, I'd like to book a free demo class.\nStudent: ${v('name')}\nClass: ${v('cls')}\nCourse: ${v('course')}\nPhone: ${v('phone')}` + (v('msg') ? `\nNote: ${v('msg')}` : '');
+    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+  });
+
+  // Mobile nav
+  const toggle = document.getElementById('navToggle'), links = document.getElementById('navLinks');
+  function setNav(open){
+    links.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    toggle.querySelector('use').setAttribute('href', open ? '#i-x' : '#i-menu');
+  }
+  toggle.addEventListener('click', () => setNav(!links.classList.contains('open')));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setNav(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setNav(false); });
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) reveals.forEach(el => el.classList.add('in'));
+  else { const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.1}); reveals.forEach(el => io.observe(el)); }
+  document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFullYear());
+</script>
+</body>
+</html>
